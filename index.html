@@ -37,6 +37,34 @@
 
   <div class="overlay" data-overlay></div>
 
+    <!--
+    - NOTIFICATION TOAST
+  -->
+
+  <div class="notification-toast" data-toast>
+
+    <button class="toast-close-btn" data-toast-close>
+      <ion-icon name="close-outline"></ion-icon>
+    </button>
+
+    <div class="toast-banner">
+      <img src="./assets/images/logo/livraison.png" alt="Rose Gold Earrings" width="80" height="70">
+    </div>
+
+    <div class="toast-detail">
+
+      <p class="toast-message">
+        Livraison partout dans le Maroc!
+      </p>
+
+      <p class="toast-title">
+        Buy now!
+      </p>
+
+    </div>
+
+  </div>
+
 
   <!--
     - HEADER
@@ -108,49 +136,12 @@
 
         </div>
 
-        <div class="header-user-actions">
 
-          <button class="action-btn" id="cartBtn">
-            <ion-icon name="bag-handle-outline"></ion-icon>
-            <span id="cartBadge" class="count">0</span>
-          </button>
-
-        </div>
 
       </div>
 
     </div>
 
-    <nav class="desktop-navigation-menu">
-
-      <div class="container">
-
-        <ul class="desktop-menu-category-list">
-
-          <li class="menu-category">
-            <a href="#" class="menu-title" data-category="home">Home</a>
-          </li>
-
-          <li class="menu-category">
-            <a href="#" class="menu-title" data-category="men">Men's</a>
-          </li>
-
-          <li class="menu-category">
-            <a href="#" class="menu-title" data-category="women">Women's</a>
-          </li>
-
-          <li class="menu-category">
-            <a href="#" class="menu-title" data-category="health">Health</a>
-          </li>
-
-          <li class="menu-category">
-            <a href="#" class="menu-title" data-category="beauty">Beauty</a>
-          </li>
-
-        </ul>
-
-      </div>
-    </nav>
 
 
     <div class="mobile-bottom-navigation">
@@ -288,7 +279,48 @@
   </header>
 
 
+  <!--
+    - The categories menu
+  -->
+<nav class="desktop-navigation-menu">
 
+      <div class="container">
+
+        <ul class="desktop-menu-category-list">
+
+          <li class="menu-category">
+            <a class="menu-title" data-category="home">Home</a>
+          </li>
+
+          <li class="menu-category">
+            <a class="menu-title" data-category="men">Men's</a>
+          </li>
+
+          <li class="menu-category">
+            <a class="menu-title" data-category="women">Women's</a>
+          </li>
+
+          <li class="menu-category">
+            <a class="menu-title" data-category="health">Health</a>
+          </li>
+
+          <li class="menu-category">
+            <a class="menu-title" data-category="beauty">Beauty</a>
+          </li>
+
+        </ul>
+
+        <div class="header-user-actions">
+
+          <button class="action-btn" id="cartBtn">
+            <ion-icon name="bag-handle-outline"></ion-icon>
+            <span id="cartBadge" class="count">0</span>
+          </button>
+
+        </div>
+
+      </div>
+    </nav>
 
 
   <!--
@@ -319,6 +351,10 @@
 
               <p class="banner-text">
                 starting at<b> 19dh</b>.00
+              </p>
+
+              <p class="banner-text-delivery">
+                Delivery in all Morocco!
               </p>
 
             </div>

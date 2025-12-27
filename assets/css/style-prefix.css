@@ -567,7 +567,7 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
   transition: color var(--transition-timing);
 }
 
-.search-btn:hover { color: var(--salmon-pink); }
+.search-btn:hover { color: var(--ocean-green); }
 
 .mobile-bottom-navigation {
   background: var(--white);
@@ -663,7 +663,7 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
 }
 
 .menu-top .menu-title {
-  color: var(--salmon-pink);
+  color: var(--ocean-green);
   font-size: var(--fs-4);
   font-weight: var(--weight-600);
 }
@@ -1402,7 +1402,7 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
 }
 
 .product-featured .price {
-  color: var(--salmon-pink);
+  color: var(--ocean-green);
   font-weight: var(--weight-700);
 }
 
@@ -2436,6 +2436,22 @@ footer {
     margin-bottom: 10px;
   }
 
+  .banner-text-delivery {
+    display: block;
+    color:#e66565;
+    font-size: var(--fs-3);
+    font-weight: var(--weight-500);
+    margin-bottom: 10px;
+  }
+
+  .product-title{
+    display: block;
+    color:#e66565;
+    font-size: var(--fs-3);
+    font-weight: var(--weight-500);
+    margin-bottom: 10px;
+  }
+
   .banner-text b { font-size: var(--fs-2); }
 
   .banner-btn { padding: 7px 20px; }
@@ -2641,6 +2657,32 @@ footer {
     max-width: 750px;
     margin: auto;
   }
+
+    .desktop-navigation-menu {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .desktop-navigation-menu .container {
+      display: flex;
+      align-items: center;
+    }
+
+    /* Center the categories */
+    .desktop-menu-category-list {
+      display: flex;
+      gap: 24px;
+      margin: 0 auto;   /* THIS centers the categories */
+    }
+
+    /* Cart stays on the right */
+    .header-user-actions {
+      display: flex;
+      align-items: center;
+    }
 
 
   
@@ -2936,7 +2978,7 @@ footer {
     transition: var(--transition-timing);
   }
 
-  .desktop-menu-category-list .menu-category > .menu-title:hover { color: var(--salmon-pink); }
+  .desktop-menu-category-list .menu-category > .menu-title:hover { color: var(--ocean-green); }
   
   .desktop-menu-category-list .menu-category > .menu-title::after {
     content: '';

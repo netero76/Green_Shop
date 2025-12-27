@@ -19,6 +19,11 @@ const modalCloseFunc = function () { modal.classList.add('closed') }
 const notificationToast = document.querySelector('[data-toast]');
 const toastCloseBtn = document.querySelector('[data-toast-close]');
 
+// notification toast eventListener
+toastCloseBtn.addEventListener('click', function () {
+  notificationToast.classList.add('closed');
+});
+
 
 
 
@@ -146,8 +151,7 @@ function renderProducts(list = null) {
         <img src="${product.image}" alt="${product.title}" width="300" class="product-img hover">
         <p class="showcase-badge angle Green">${product.badge}</p>
         <div class="showcase-actions">
-          <button class="btn-action"><ion-icon name="eye-outline"></ion-icon></button>
-          <button class="btn-action"><ion-icon name="bag-add-outline"></ion-icon></button>
+          <button class="btn-action" onclick="openLightbox('${product.image}')"><ion-icon name="eye-outline"></ion-icon></button>
         </div>
       </div>
       <div class="showcase-content">
@@ -427,7 +431,6 @@ function renderSearchResults(query) {
     return;
   }
 
-  // Use your existing template system if you want
   container.innerHTML = filteredProducts.map(product => templates["all-products"](product)).join("");
   scrollToView("products");
 }
@@ -521,17 +524,16 @@ function startCountdowns() {
 
 
 // ========================
-// Translation
+// open product
 // ========================
-function changeLanguage(language) {
-  console.log("transalting");
-  if (language === 'en') {
-    location.reload(); // Reload to reset to English
-  } else {
-    // Change the page language using Google Translate
-    window.location.href = `https://translate.google.com/translate?sl=en&tl=${language}&u=${window.location.href}`;
-  }
+const params = new URLSearchParams(window.location.search);
+const productId = params.get("id");
+
+
+function goToProduct(productId) {
+  window.location.href = `product.html?id=${productId}`;
 }
+
 
 
 renderProductsByType("best-seller");

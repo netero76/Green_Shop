@@ -170,6 +170,24 @@ const products = [
   ✔️ ترطيب عميق وتغذية فعّالة  
   ✔️ مناسب للعناية بالبشرة والجسم
   `
+  },
+   {
+    id: 10,
+    title: "كريم المفاصل بالعكبر",
+    price: 55,
+    oldPrice: 75,
+    categories: ["health","men","women"],
+    type: ["promotion"],
+    rating: 4,
+    badge:"New",
+    image: "./assets/images/products/propolis.jpeg",
+    description: ` 
+  ✔️ كيساعد على تخفيف الألم
+  ✔️ كيرخي العضلات المشدودة
+  ✔️ مناسب للبرد والتعب اليومي
+  ✔️ مناسب للكبار والرياضيين
+  📦 التوصيل بالمجان
+  `
   }
   ];
 
@@ -177,11 +195,11 @@ const products = [
 const templates = {
   'best-seller': (product) => `
     <div class="showcase">
-      <a href="#" class="showcase-img-box">
+      <a class="showcase-img-box">
         <img src="${product.image}" alt="${product.title}" class="showcase-img" width="75" height="75">
       </a>
       <div class="showcase-content">
-        <a href="#"><h4 class="showcase-title">${product.title}</h4></a>
+        <a><h4 class="showcase-title">${product.title}</h4></a>
         <div class="showcase-rating">
           ${generateStarRating(product.rating)}
         </div>
@@ -274,8 +292,8 @@ const templates = {
   'all-products': (product) => `
     <div class="showcase">
       <div class="showcase-banner">
-        <img src="${product.image}" alt="${product.title}" width="300" class="product-img default">
-        <img src="${product.image}" alt="${product.title}" width="300" class="product-img hover">
+        <img src="${product.image}" alt="${product.title}" width="300" class="product-img default" onclick="openLightbox('${product.image}')">
+        <img src="${product.image}" alt="${product.title}" width="300" class="product-img hover" onclick="openLightbox('${product.image}')">
         <p class="showcase-badge angle Green">${product.badge}</p>
         <div class="showcase-actions">
           <button class="btn-action" id="previewBtn" onclick="openLightbox('${product.image}')"><ion-icon name="eye-outline"></ion-icon></button>
