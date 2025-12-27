@@ -2438,16 +2438,8 @@ footer {
 
   .banner-text-delivery {
     display: block;
-    color:#e66565;
-    font-size: var(--fs-3);
-    font-weight: var(--weight-500);
-    margin-bottom: 10px;
-  }
-
-  .product-title{
-    display: block;
-    color:#e66565;
-    font-size: var(--fs-3);
+    color:#dc2626;
+    font-size: var(--fs-4);
     font-weight: var(--weight-500);
     margin-bottom: 10px;
   }
@@ -3218,8 +3210,7 @@ footer {
 
   .product-featured .countdown-content { padding: 5px 10px; }
 
-  .product-grid { -ms-grid-columns: (1fr)[3]; grid-template-columns: repeat(3, 1fr); }
-
+ .product-grid { -ms-grid-columns: (1fr)[3]; grid-template-columns: repeat(3, 1fr); }
 
 
   /**
