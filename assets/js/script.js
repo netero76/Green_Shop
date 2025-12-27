@@ -534,6 +534,23 @@ function goToProduct(productId) {
   window.location.href = `product.html?id=${productId}`;
 }
 
+// ========================
+// Translation
+// ========================
+
+function changeLanguage(lang) {
+  if (lang === '') return;
+  
+  // Find and trigger Google Translate's language dropdown
+  const selectElement = document.querySelector('.goog-te-combo');
+  console.log(selectElement);
+  if (selectElement) {
+    console.log(lang);
+    selectElement.value = lang;
+    selectElement.dispatchEvent(new Event('change'));
+  }
+}
+
 
 
 renderProductsByType("best-seller");
