@@ -86,8 +86,8 @@ const products = [
   {
     id: 5,
     title: "مكمل مخصص للرجال",
-    price: 19,
-    oldPrice: 30,
+    price: 59,
+    oldPrice: 69,
     categories: ["men"],
     type: [],
     rating: 4,
