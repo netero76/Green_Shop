@@ -144,32 +144,8 @@ function renderProducts(list = null) {
     return;
   }
 
-  container.innerHTML = filteredProducts.map(product => `
-    <div class="showcase">
-      <div class="showcase-banner">
-        <img src="${product.image}" alt="${product.title}" width="300" class="product-img default">
-        <img src="${product.image}" alt="${product.title}" width="300" class="product-img hover">
-        <p class="showcase-badge angle Green">${product.badge}</p>
-        <div class="showcase-actions">
-          <button class="btn-action" onclick="openLightbox('${product.image}')"><ion-icon name="eye-outline"></ion-icon></button>
-        </div>
-      </div>
-      <div class="showcase-content">
-        <a href="#" class="showcase-category">${product.title}</a>
-        <a href="#"><h3 class="showcase-title">${product.description}</h3></a>
-        <div class="showcase-rating">
-          ${generateStarRating(product.rating)}
-        </div>
-        <div class="price-box">
-          <p class="price">${product.price}dh</p>
-          <del>${product.oldPrice}dh</del>
-        </div>
-        <button class="add-to-cart" onclick="addToCart(${product.id})">
-          Add to Cart
-        </button>
-      </div>
-    </div>
-  `).join("");
+  container.innerHTML = filteredProducts.map(product => templates['all-products'](product)).join("");
+
 }
 
 function scrollToView(category){
@@ -432,7 +408,6 @@ function renderSearchResults(query) {
   }
 
   container.innerHTML = filteredProducts.map(product => templates["all-products"](product)).join("");
-  scrollToView("products");
 }
 
 // Trigger search on button click
